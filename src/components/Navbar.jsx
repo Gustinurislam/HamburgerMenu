@@ -1,6 +1,7 @@
 import Button from "./Button"
 import { FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
+import { FaHamburger } from "react-icons/fa";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false)
@@ -9,7 +10,6 @@ const Navbar = () => {
         { name: 'Home', link: '/' },
         { name: 'Service', link: '/' },
         { name: 'About', link: '/' },
-        { name: 'Blog', link: '/' },
         { name: 'Contact', link: '/' }
     ]
 
@@ -17,7 +17,7 @@ const Navbar = () => {
         <nav className="shadow-md w-full sticky bg-white py-4 px-10">
             <div className="md:flex md:items-center md:justify-between">
                 <div className="flex items-center justify-between">
-                    <h1 className="font-medium text-2xl text-indigo-600">Hamburger Menu</h1>
+                    <h1 className="font-medium text-2xl text-indigo-600 flex items-center"><FaHamburger className="mr-1" /> Menu</h1>
                     <div className="md:hidden" onClick={() => setOpen(!open)}>
                         {open ? (
                             <FiX className="text-3xl text-indigo-600" />
